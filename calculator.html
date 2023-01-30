@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: lightgreen;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+.ss{
+    width: 40%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+   
+}
+   .bb1{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(76, 152, 127);
+    color:white;
+   } 
+   input{
+    height: 30px;
+    width: 280px;
+    border-radius: 10px;
+   }
+   button{
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgb(76, 152, 127);
+    color:white;
+   }
+  
+</style>
+
+<body>
+  
+        <div style="font-size:25px">
+            <p>1.Ստուգել մուտքագրված երկնիշ թիվը բացասական է՝ թե դրական</p>
+        </div>
+        <div><input type="text" id="inp">
+            <button onclick="f1()">Ստուգել</button>
+        </div>
+        <div>
+            <p id="p" style="color:red;background-color:lightpink;letter-spacing: 3px;"></p>
+        </div>
+        <div>
+            <p id="pp" style="color:green;background-color:lightskyblue; letter-spacing: 2px;"></p>
+        </div>
+    
+       
+
+    <!-- @ntrel  -->
+    <div class="choose">
+        <input type="text" id="n1" type="number" />
+    
+        <button class="bb1" onclick="calc1()">x2</button>
+        <button class="bb1" onclick="calc2()">x3</button>
+        <button class="bb1" onclick="calc3()">x4</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+         function f1() {
+           let inp = document.getElementById("inp").value;
+
+            if (inp >= 10 && inp <= 99) {
+                document.getElementById("pp").innerHTML = "Դրական է";
+              } else if (inp <= -10 && inp >= -90) {
+                 document.getElementById("p").innerHTML = "Մուտքագրված թիվը չի համապատասխանում պահանջին";
+             } else {
+                  document.getElementById("p").innerHTML = "Մուտքագրված թիվը չի բավարարում պահանջին";
+              }
+            }
+
+        // 2rd input
+
+        
+        result.style.width = "100px";
+        result.style.height = "50px";
+        result.style.backgroundColor = "blue";
+        result.style.color="white";
+        function calc1() {
+        let result = document.getElementById("result");
+            result.innerHTML = n1.value ** 2;
+            result.style.backgroundColor = "red";
+           result.style.display = "flex";
+           result.style.justifyContent ="flexEnd";
+
+            n1.value=""
+        }
+        function calc2() {
+            let result = document.getElementById("result");
+            result.innerHTML = n1.value ** 3;
+           
+        }
+        function calc3() {
+            let result = document.getElementById("result");
+            result.innerHTML = n1.value ** 4;
+            
+        }
+
+
+    </script>
+    </div>
+</body>
+
+</html>
